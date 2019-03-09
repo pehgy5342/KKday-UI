@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:background="@color/default_circle_indicator_fill_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="23dp"
+            android:layout_height="38dp" android:background="@drawable/title2"
+            android:id="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="5dp"/>
+    <TextView
+            android:text="行程介紹"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="13dp"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:layout_width="29dp"
+            android:layout_height="25dp" android:background="@drawable/time"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:id="@+id/imageView9"/>
+    <TextView
+            android:text="所需時間 : 1小時"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" app:layout_constraintStart_toEndOf="@+id/imageView9"
+            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.003" android:layout_marginTop="60dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+            android:layout_width="340dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            android:layout_marginTop="16dp" android:id="@+id/view3" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" android:layout_marginStart="32dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"/>
+
+    <ImageView
+            android:layout_width="343dp"
+            android:layout_height="206dp" android:background="@drawable/data2"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/view3" android:id="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"/>
+
+    <Button
+            android:text="閱讀更多"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            android:id="@+id/button" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
