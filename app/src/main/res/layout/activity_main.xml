@@ -13,13 +13,13 @@
             android:id="@+id/appBarLayout"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout">
 
         <androidx.appcompat.widget.Toolbar
-
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
             <androidx.appcompat.widget.Toolbar
                     android:background="#FFFFFF"
                     android:layout_width="wrap_content"
@@ -27,17 +27,14 @@
                 <Button
                         android:id="@+id/btn_search"
                         android:background="@drawable/search"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"/>
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
 
                 <EditText android:layout_width="230dp"
+                          android:hint="搜尋景點、國家或城市"
                           android:layout_height="42dp"
                           android:background="#FFFFFF"/>
-                <!--<androidx.appcompat.widget.SearchView-->
-                <!--android:background="#FFFFFF"-->
-                <!--android:id="@+id/searchView"-->
-                <!--android:layout_width="280dp"-->
-                <!--android:layout_height="match_parent">-->
+
 
                 <!--</androidx.appcompat.widget.SearchView>-->
             </androidx.appcompat.widget.Toolbar>
@@ -46,13 +43,14 @@
                 <Button
                         android:background="@drawable/bell"
 
-                        android:layout_height="35dp"
-                        android:layout_width="35dp"
+                        android:layout_height="28dp"
+                        android:layout_width="25dp"
                         app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
                         android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent">
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.31"
+                        app:layout_constraintVertical_bias="0.0">
 
                 </Button>
 
@@ -86,12 +84,13 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_navigation"
-                app:menu="@menu/bottom_navigation"
+                app:menu="@menu/home_navigation"
                 android:background="@color/vpi__bright_foreground_inverse_holo_light"
-                app:itemIconTint="@color/colorPrimary"
-                app:itemTextColor="@color/colorPrimary"
+                app:itemIconTint="#34CCDA"
+                app:itemTextColor="#34CCDA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -102,9 +101,6 @@
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

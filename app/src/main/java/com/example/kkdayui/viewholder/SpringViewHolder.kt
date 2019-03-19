@@ -5,12 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kkdayui.adapter.SpringAdapter
-import kotlinx.android.synthetic.main.second_recyclerview.view.*
+import kotlinx.android.synthetic.main.travel_recyclerview.view.*
 
 class SpringViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    fun setData(viewHolder: SpringViewHolder) {
+    fun setData() {
 
-        val recyclerView = viewHolder.itemView.rv_second
+        val recyclerView = itemView.rv_travel
 
 
         val springAdapter = SpringAdapter()

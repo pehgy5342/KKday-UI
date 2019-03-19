@@ -9,21 +9,21 @@ import com.example.kkdayui.`object`.data
 import com.example.kkdayui.item.Content
 import kotlinx.android.synthetic.main.travel_item.view.*
 
-class SpringAdapter : RecyclerView.Adapter<SpringAdapter.CustomHolder>() {
-
-
+class MoreAdapter : RecyclerView.Adapter<MoreAdapter.CustomHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.travel_item, parent, false)
         return CustomHolder(view)
-
     }
 
-    override fun getItemCount() = data.spring.count()
+    override fun getItemCount() = data.more.count()
 
     override fun onBindViewHolder(holder: CustomHolder, position: Int) {
 
 
-        holder.bind(data.spring[position])
+
+
+        holder.bind(data.more[position])
+
 
     }
 
@@ -32,31 +32,33 @@ class SpringAdapter : RecyclerView.Adapter<SpringAdapter.CustomHolder>() {
 
         val info = itemView.info
         val place = itemView.place
+        val twd = itemView.twd
         val price = itemView.price
         val starts = itemView.stars
-        val twd = itemView.twd
         val image = itemView.image
         val check = itemView.home_check
 
-        fun bind(content: Content.TravelData) {
 
+        fun bind(content:Content.TravelData) {
             info.text = content.info
             place.text = content.place
+            twd.text = content.twd
             price.text = content.price
             starts.text = content.starts
-            twd.text = content.twd
             image.setImageResource(content.image)
             check.isChecked = content.checkBox
 
             check.setOnClickListener {
 
-                println("************** before ${com.example.kkdayui.`object`.data.spring[position].checkBox}")
-                data.spring[position].checkBox = !data.spring[position].checkBox
-                println("************** after ${com.example.kkdayui.`object`.data.spring[position].checkBox}")
+                data.more[position].checkBox = !data.more[position].checkBox
 
             }
 
 
+
         }
+
+
     }
+
 }

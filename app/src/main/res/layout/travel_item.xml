@@ -12,7 +12,8 @@
         app:cardUseCompatPadding="true"
         android:clickable="true" android:id="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         tools:layout_editor_absoluteY="30dp">
 
 
@@ -37,28 +38,33 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:layout_alignParentLeft="true"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <CheckBox
+                android:id="@+id/home_check"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:button="@drawable/home_checkbox"
                 app:layout_constraintEnd_toEndOf="parent"
-        />
-
-
+                app:layout_constraintTop_toTopOf="parent"/>
         <TextView
                 android:id="@+id/info"
-                android:layout_width="301dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/image"
                 android:maxLines="2"
                 android:text="Info"
                 android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@+id/image"
-                android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginRight="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_title"
                 app:layout_constraintHorizontal_bias="0.142"/>
 
 
@@ -69,12 +75,9 @@
                 android:layout_below="@+id/info"
                 android:fontFamily="sans-serif-condensed"
                 android:text="place"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="14sp"
-                android:textStyle="normal|italic"
+                android:textSize="13sp"
                 android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/info"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-        />
+                app:layout_constraintStart_toEndOf="@+id/iv_num"/>
 
 
         <TextView
@@ -82,13 +85,13 @@
                 android:text="TWD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toStartOf="@+id/money" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/price" android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 app:layout_constraintTop_toTopOf="@+id/ratingBar"
                 app:layout_constraintBottom_toBottomOf="@+id/ratingBar"/>
 
         <TextView
-                android:id="@+id/money"
+                android:id="@+id/price"
                 android:text="money"
                 android:textStyle="bold"
                 android:textSize="20dp"
@@ -105,25 +108,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:id="@+id/ratingBar"
-                android:layout_marginEnd="192dp"
-                app:layout_constraintEnd_toStartOf="@+id/twd" android:layout_marginRight="192dp"
-                app:layout_constraintStart_toStartOf="@+id/imageView2" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/iv_num"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/place"/>
+
+        <TextView
+                android:id="@+id/stars"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="()"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/twd"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/place"
+                app:layout_constraintHorizontal_bias="0.0"/>
         <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp" app:srcCompat="@drawable/title"
-                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp" app:srcCompat="@drawable/title"
+                android:id="@+id/iv_title"
                 android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/image"
-                app:layout_constraintStart_toStartOf="parent"
-        />
+                app:layout_constraintStart_toStartOf="@+id/image"/>
         <ImageView
-                android:layout_width="22dp"
-                android:layout_height="21dp" app:srcCompat="@drawable/gps"
-                android:id="@+id/imageView2"
+                android:layout_width="18dp"
+                android:layout_height="18dp" app:srcCompat="@drawable/gps"
+                android:id="@+id/iv_num"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toTopOf="@+id/ratingBar"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-        />
+                app:layout_constraintStart_toStartOf="@+id/iv_title"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

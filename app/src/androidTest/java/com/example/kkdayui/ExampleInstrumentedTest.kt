@@ -17,7 +17,7 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
-        // Context of the app under test.
+        // Content of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
         assertEquals("com.example.kkdayui", appContext.packageName)
     }

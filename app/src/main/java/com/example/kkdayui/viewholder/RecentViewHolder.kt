@@ -5,13 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kkdayui.adapter.RecentAdapter
-import kotlinx.android.synthetic.main.second_recyclerview.view.*
+import com.example.kkdayui.item.Content
+import kotlinx.android.synthetic.main.travel_recyclerview.view.*
 
 class RecentViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    fun setData(viewHolder: RecentViewHolder) {
+    fun setData() {
 
-        val recyclerView = viewHolder.itemView.rv_second
+        val recyclerView = itemView.rv_travel
 
         val recentAdapter = RecentAdapter()
         println("88888$recentAdapter")

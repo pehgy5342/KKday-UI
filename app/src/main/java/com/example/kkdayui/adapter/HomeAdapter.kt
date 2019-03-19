@@ -9,10 +9,9 @@ import com.example.kkdayui.`object`.data
 import com.example.kkdayui.viewholder.CityViewHolder
 import com.example.kkdayui.viewholder.RecentViewHolder
 import com.example.kkdayui.viewholder.SpringViewHolder
-import kotlinx.android.synthetic.main.second_recyclerview.view.*
-import java.util.*
+import kotlinx.android.synthetic.main.travel_recyclerview.view.*
 
-class HomeAdapter(var context: Context, var list: ArrayList<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     companion object {
@@ -39,25 +38,23 @@ class HomeAdapter(var context: Context, var list: ArrayList<String>) : RecyclerV
     }
 
 
+    override fun getItemCount() = 3
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-    override fun getItemCount() = list.size
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):RecyclerView.ViewHolder {
-
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.second_recyclerview, parent, false)
-
+        val view_travel = LayoutInflater.from(parent.context).inflate(R.layout.travel_recyclerview, parent, false)
+        val view_city = LayoutInflater.from(parent.context).inflate(R.layout.city_recyclerview, parent, false)
 
         return when (viewType) {
             RECENTLAYOUT -> {
-                RecentViewHolder(view)
+                RecentViewHolder(view_travel)
 
             }
             CITYLAYOUT -> {
-                CityViewHolder(view)
+                CityViewHolder(view_city)
             }
             else -> {
-                SpringViewHolder(view)
+                SpringViewHolder(view_travel)
             }
         }
 
@@ -65,25 +62,23 @@ class HomeAdapter(var context: Context, var list: ArrayList<String>) : RecyclerV
     }
 
 
-
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
+
+
         when (viewHolder) {
 
+
             is RecentViewHolder -> {
-//                viewHolder.setData(list[position])
-                viewHolder.setData(viewHolder)
+                viewHolder.setData()
                 viewHolder.itemView.title.text = data.title[position]
             }
 
             is CityViewHolder -> {
-//                viewHolder.setData(list[position])
-                viewHolder.setData(viewHolder)
-                viewHolder.itemView.title.text = data.title[position]
+                viewHolder.setData()
             }
 
             is SpringViewHolder -> {
-//                viewHolder.setData(list[position])
-                viewHolder.setData(viewHolder)
+                viewHolder.setData()
                 viewHolder.itemView.title.text = data.title[position]
             }
 
@@ -91,22 +86,6 @@ class HomeAdapter(var context: Context, var list: ArrayList<String>) : RecyclerV
         }
 
     }
-
-
-//    inner class CustomHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
-//
-//
-//        val title = itemView.recent_title
-//        val recyclerview = itemView.rv_second
-//
-//        fun bind(list:Any) {
-//
-////            title.text = list.
-//
-//
-//
-//        }
-//    }
 
 
 }

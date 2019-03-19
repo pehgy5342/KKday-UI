@@ -1,38 +1,37 @@
 package com.example.kkdayui.adapter
 
 import android.content.Context
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.example.kkdayui.item.ImageItem
 import com.example.kkdayui.R
 
-class SliderAdapter(context: Context, private val imageList: ArrayList<ImageItem>) :
+class SliderAdapter(context: Context, private val list: IntArray) :
     androidx.viewpager.widget.PagerAdapter() {
 
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
+//    private val inflater: LayoutInflater = LayoutInflater.from(context)
 
+
+    override fun getCount(): Int {
+        return list.size
+
+    }
+
+    //當前viewpager位置
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        val view = LayoutInflater.from(container.context).inflate(R.layout.slider_image, container, false)
+        val imageView = view.findViewById(R.id.image) as ImageView
+
+        imageView.setImageResource(list[position])
+
+        container.addView(view, 0)
+        return view
+
+    }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return view == `object`
-
-    }
-
-    override fun getCount(): Int {
-        return imageList.size
-
-    }
-
-    override fun instantiateItem(view: ViewGroup, position: Int): Any {
-        val imageLayout = inflater.inflate(R.layout.slider_image, view, false)
-        val imageView = imageLayout.findViewById(R.id.image) as ImageView
-
-        imageView.setImageResource(imageList[position].getimage())
-
-        view.addView(imageLayout, 0)
-        return imageLayout
 
     }
 
@@ -41,11 +40,6 @@ class SliderAdapter(context: Context, private val imageList: ArrayList<ImageItem
         container.removeView(`object` as View)
     }
 
-    override fun restoreState(state: Parcelable?, loader: ClassLoader?) {}
-
-    override fun saveState(): Parcelable? {
-        return null
-    }
 
 
 }

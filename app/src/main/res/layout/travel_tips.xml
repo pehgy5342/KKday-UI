@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_circle_indicator_fill_color"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="40dp">
+
+
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="38dp"
+                android:background="@drawable/title2"
+                android:id="@+id/iv_order"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_orderTitle"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="5dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="訂單確認方式"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_orderTitle"
+                android:layout_marginTop="13dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_order"/>
+
+        <TextView
+                android:text="立即確認並發送憑證"
+                android:textSize="13sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/iv_order"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orderTitle" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_exp"
+            app:layout_constraintTop_toBottomOf="@+id/con_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_circle_indicator_fill_color"
+            tools:layout_editor_absoluteX="40dp" android:layout_marginTop="8dp">
+
+
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="38dp"
+                android:background="@drawable/title2"
+                android:id="@+id/iv_exp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_expTitle"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="使用期效"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_expTitle"
+                android:layout_marginTop="13dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_exp"/>
+
+        <TextView
+                android:text="需要按照預定日期及當天開放時間內使用，逾期失效。"
+                android:textSize="13sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/iv_exp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expTitle" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_Instruction"
+            app:layout_constraintTop_toBottomOf="@+id/con_exp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_circle_indicator_fill_color"
+            tools:layout_editor_absoluteX="40dp" android:layout_marginTop="8dp">
+
+
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="38dp"
+                android:background="@drawable/title2"
+                android:id="@+id/iv_Instruction"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_InstructionTitle"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="使用方式"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_InstructionTitle"
+                android:layout_marginTop="13dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_Instruction"/>
+
+        <TextView
+                android:text="電子憑證"
+                android:textSize="13sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/iv_Instruction"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_InstructionTitle" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/con_Instruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_circle_indicator_fill_color"
+            tools:layout_editor_absoluteX="40dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+
+
+        <ImageView
+                android:layout_width="23dp"
+                android:layout_height="38dp"
+                android:background="@drawable/title2"
+                android:id="@+id/iv_cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_cancelTitle"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="取消政策"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cancelTitle"
+                app:layout_constraintStart_toEndOf="@+id/iv_cancel"
+                android:layout_marginTop="13dp" app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:text="取消訂單後，將收取所有實際產生費用"
+                android:textSize="13sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/iv_cancel"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cancelTitle" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
