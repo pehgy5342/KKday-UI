@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kkdayui.R
-import com.example.kkdayui.`object`.data
-import com.example.kkdayui.item.Content
+import com.example.kkdayui.`object`.travelData
+import com.example.kkdayui.dataclass.Content
 import kotlinx.android.synthetic.main.travel_item.view.*
 
 class MoreAdapter : RecyclerView.Adapter<MoreAdapter.CustomHolder>() {
@@ -15,14 +15,14 @@ class MoreAdapter : RecyclerView.Adapter<MoreAdapter.CustomHolder>() {
         return CustomHolder(view)
     }
 
-    override fun getItemCount() = data.more.count()
+    override fun getItemCount() = travelData.more.count()
 
     override fun onBindViewHolder(holder: CustomHolder, position: Int) {
 
 
 
 
-        holder.bind(data.more[position])
+        holder.bind(travelData.more[position])
 
 
     }
@@ -50,7 +50,7 @@ class MoreAdapter : RecyclerView.Adapter<MoreAdapter.CustomHolder>() {
 
             check.setOnClickListener {
 
-                data.more[position].checkBox = !data.more[position].checkBox
+                travelData.more[position].checkBox = !travelData.more[position].checkBox
 
             }
 

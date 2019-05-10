@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kkdayui.`object`.data
+import com.example.kkdayui.`object`.travelData
 import com.example.kkdayui.activity.TravelActivity
-import com.example.kkdayui.item.Content
+import com.example.kkdayui.dataclass.Content
 import kotlinx.android.synthetic.main.travel_item.view.*
 
 
@@ -36,13 +36,13 @@ class RecentAdapter : RecyclerView.Adapter<RecentAdapter.CustomHolder>() {
 
     }
 
-    override fun getItemCount() = data.recent.count()
+    override fun getItemCount() = travelData.recent.count()
 
 
     override fun onBindViewHolder(holder: CustomHolder, position: Int) {
 
 
-        holder.bind(data.recent[position])
+        holder.bind(travelData.recent[position])
 
 
 
@@ -87,7 +87,7 @@ class RecentAdapter : RecyclerView.Adapter<RecentAdapter.CustomHolder>() {
 
             check.setOnClickListener {
 
-                data.recent[position].checkBox = !data.recent[position].checkBox
+                travelData.recent[position].checkBox = !travelData.recent[position].checkBox
 
             }
 

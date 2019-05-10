@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kkdayui.R
-import com.example.kkdayui.`object`.data
-import com.example.kkdayui.item.Content
+import com.example.kkdayui.`object`.travelData
+import com.example.kkdayui.dataclass.Content
 import kotlinx.android.synthetic.main.travel_item.view.*
 
 class SpringAdapter : RecyclerView.Adapter<SpringAdapter.CustomHolder>() {
@@ -18,12 +18,12 @@ class SpringAdapter : RecyclerView.Adapter<SpringAdapter.CustomHolder>() {
 
     }
 
-    override fun getItemCount() = data.spring.count()
+    override fun getItemCount() = travelData.spring.count()
 
     override fun onBindViewHolder(holder: CustomHolder, position: Int) {
 
 
-        holder.bind(data.spring[position])
+        holder.bind(travelData.spring[position])
 
     }
 
@@ -50,9 +50,9 @@ class SpringAdapter : RecyclerView.Adapter<SpringAdapter.CustomHolder>() {
 
             check.setOnClickListener {
 
-                println("************** before ${com.example.kkdayui.`object`.data.spring[position].checkBox}")
-                data.spring[position].checkBox = !data.spring[position].checkBox
-                println("************** after ${com.example.kkdayui.`object`.data.spring[position].checkBox}")
+                println("************** before ${com.example.kkdayui.`object`.travelData.spring[position].checkBox}")
+                travelData.spring[position].checkBox = !travelData.spring[position].checkBox
+                println("************** after ${com.example.kkdayui.`object`.travelData.spring[position].checkBox}")
 
             }
 

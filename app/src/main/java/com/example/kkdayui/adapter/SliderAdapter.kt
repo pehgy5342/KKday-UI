@@ -10,7 +10,7 @@ import com.example.kkdayui.R
 class SliderAdapter(context: Context, private val list: IntArray) :
     androidx.viewpager.widget.PagerAdapter() {
 
-//    private val inflater: LayoutInflater = LayoutInflater.from(context)
+
 
 
     override fun getCount(): Int {
@@ -25,7 +25,7 @@ class SliderAdapter(context: Context, private val list: IntArray) :
 
         imageView.setImageResource(list[position])
 
-        container.addView(view, 0)
+        container.addView(view)
         return view
 
     }

@@ -1,4 +1,4 @@
-package com.example.kkdayui.item
+package com.example.kkdayui.dataclass
 
 class Content {
     data class TravelData(

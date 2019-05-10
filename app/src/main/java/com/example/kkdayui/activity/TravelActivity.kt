@@ -27,6 +27,8 @@ class TravelActivity : MainActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_travel)
 
+        toolbar.title = "【2019京都賞櫻】嵐山小火車保證有限量車票 (季節限定)"
+
         init()
         travel()
     }

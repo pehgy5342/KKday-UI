@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kkdayui.R
-import com.example.kkdayui.`object`.data
+import com.example.kkdayui.`object`.travelData
 import com.example.kkdayui.viewholder.CityViewHolder
 import com.example.kkdayui.viewholder.RecentViewHolder
 import com.example.kkdayui.viewholder.SpringViewHolder
@@ -70,7 +70,7 @@ class HomeAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.View
 
             is RecentViewHolder -> {
                 viewHolder.setData()
-                viewHolder.itemView.title.text = data.title[position]
+                viewHolder.itemView.title.text = travelData.title[position]
             }
 
             is CityViewHolder -> {
@@ -79,7 +79,7 @@ class HomeAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView.View
 
             is SpringViewHolder -> {
                 viewHolder.setData()
-                viewHolder.itemView.title.text = data.title[position]
+                viewHolder.itemView.title.text = travelData.title[position]
             }
 
 
