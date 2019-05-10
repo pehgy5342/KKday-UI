@@ -1,21 +1,24 @@
 # KKday-UI
+以App「KKdayUI」作範例，來練習UI佈局設計
 
-## 用途(功能)
+## 用途(功能)、Features
 * 首頁
 * 行程介紹
 
 ## Views
 * 首頁
   * Toolbar
+  * EditText
+  * Button
   * RecyclerView
-  * 
   * BottomNavigationView
   
 * 行程介紹
   * ViewPager
   * Toolbar
   * NestedScrollView
-  * TextView
+  * RecyclerView
+  * Button
   
 ## ItemView
 * CardView
