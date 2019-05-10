@@ -2,14 +2,13 @@
 
 ## 用途(功能)
 * 首頁
-  *
 * 行程介紹
 
 ## Views
 * 首頁
   * Toolbar
   * RecyclerView
-  * CardView
+  * 
   * BottomNavigationView
   
 * 行程介紹
@@ -18,6 +17,14 @@
   * NestedScrollView
   * TextView
   
+## ItemView
+* CardView
+* TextView
+* CheckBox
+* RatingBar
+* ImageView
+
+
 ## Layout
 * 首頁
   * ConstraintLayout
