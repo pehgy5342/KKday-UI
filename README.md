@@ -42,6 +42,10 @@
 ## 結構
 
 * 主頁
-![IMG](MainView.png)
+![PNG](MainView.png)
 
+* 旅遊頁面
+![PNG](TravelView.png)
 
+## Demo
+![GIF](KKdayUI_Demo.gif)
