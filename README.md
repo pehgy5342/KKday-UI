@@ -40,4 +40,4 @@
 * CirclePageIndicator
 
 ## Demo
-![Gif](KKdayUI_Demo.gif)
+![GIF](KKdayUI_Demo.gif)
