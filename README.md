@@ -39,5 +39,13 @@
 * Glide
 * CirclePageIndicator
 
+## 結構
+* 主頁
+![IMG](MainView.png)
+
+* 旅遊頁面
+![IMG](TravelView.png)
+
+
 ## Demo
 ![GIF](KKdayUI_Demo.gif)
