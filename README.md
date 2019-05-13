@@ -1,6 +1,4 @@
 # KKday-UI
-
-## 用途(功能)
 以App「KKdayUI」作範例，來練習UI佈局設計
 
 ## Views
