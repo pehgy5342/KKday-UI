@@ -43,8 +43,9 @@
 
 * 主頁
 ![PNG](MainView.png)
+* 旅遊頁面
 
-** 旅遊頁面
+
 ![PNG](TravelView.png)
 
 ## Demo
